@@ -1,25 +1,16 @@
 version = 1
 
-test_patterns = ["**/test/**"]
+[[analyzers]]
+name = "java"
+enabled = true
 
-exclude_patterns = [
-    "static/**",
-    "deploy/**",
-    "contributions/**"
-]
+  [analyzers.meta]
+  runtime_version = "11"
+
+[[analyzers]]
+name = "shell"
+enabled = true
 
 [[analyzers]]
 name = "javascript"
 enabled = true
-
-  [analyzers.meta]
-  plugins = ["react"]
-  environment = [
-    "nodejs",
-    "browser",
-    "cypress"
-  ]
-  dialect = "typescript"
-  dependency_file_paths = [
-  '/app/client/'
-  ]
